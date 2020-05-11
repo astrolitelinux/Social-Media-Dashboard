@@ -48,6 +48,30 @@ body {
 	position: relative;
 	left: 646px;
 
+
+/* *switched from h1 to span to use inline-block element properties */
+
+.parent {
+	position: relative;
+	top: 36px;
+	left: 175px;
+	min-width: 100%;
+}
+
+.social-title {
+	display: inline;
+	font-size: 28px;
+	font-weight: 700;
+}
+
+/* *styles needed to keep toggle section
+*inline with .social-title */
+
+#toggle {
+	display: inline;
+	position: relative;
+	left: 646px;
+	top: 49px;
 }
 
 #toggle p {
