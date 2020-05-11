@@ -15,7 +15,6 @@ body {
 	background-color: hsl(225, 100%, 98%);
 	min-width: 1440px;
 	height: 244px;
-
 }
 
 /* *this is a <span> element, so margin/padding
@@ -31,7 +30,6 @@ body {
 	position: relative;
 	top: 36px;
 	left: 175px;
-
 }
 
 .social-title {
@@ -47,7 +45,7 @@ body {
 	display: inline;
 	position: relative;
 	left: 646px;
-
+}
 
 /* *switched from h1 to span to use inline-block element properties */
 
