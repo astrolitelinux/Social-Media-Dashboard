@@ -4,58 +4,97 @@
 }
 
 body {
-	width: 1440px;
 	font-size: 14px;
 	font-family: Inter, serif;
-	margin: 0 auto;
 	color: hsl(230, 17%, 14%);
 }
 
-/* Heading styles with Light Gray BG */
+/* Heading styles with Lightgra.y BG */
 
 .heading {
-	background-color: gray;
-	/*//hsl(225, 100%, 98%);*/
+	background-color: hsl(225, 100%, 98%);
+	min-width: 1440px;
 	height: 244px;
+
 }
 
-.heading h1 {
-	padding-top: 36px;
-	margin-left: 162px;
-	vertical-align: top;
-	font-weight: bold;
+/* *this is a <span> element, so margin/padding
+*top or bottom will not work. using position: relative,
+*with offset value instead */
+
+/* *switched from h1 to span to use inline-block element properties */
+
+.parent {
+	position: relative;
+	top: 36px;
+	left: 175px;
+	min-width: 100%;
 }
 
-.heading p {
-	color: hsl(228, 12%, 44%);
-	padding-left: 1.5px;
-	padding-top: 3px;
-	margin-left: 162px;
-	font-weight: bold;
+.social-title {
+	display: inline;
+	font-size: 28px;
+	font-weight: 700;
 }
 
-/* tried to use #toggle to
-target <p> and <btn> of that #id,
-but it doesn't work! */
+/* *styles needed to keep toggle section
+*inline with .social-title */
 
-/* ' .heading p ' has a level of (11)
-and #toggle has a level of (100) */
+#toggle {
+	display: inline;
+	position: relative;
+	left: 646px;
+	top: 49px;
+}
 
-/* *BUT because #toggle div is nested inside .heading div,
-* the <p> tag inside #toggle is targeted
-* by both declaration and has a level of (111),
-* and thus is higher than #toggle by itself.
-
-! Add p to #toggle declaration */
-
-/*// #toggle */
-#toggle p, button{
+#toggle p {
 	color: hsl(230, 22%, 74%);
 	display: inline;
+	padding-right: 13px;
+	font-weight: 700;
 }
-#toggle {
-text-align: right;
+
+/* *set toggle switch to inline block
+*so we can set width and height */
+
+/* *set position to relative so we can
+*set SLIDER (child) position to ABSOLUTE */
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 24px;
 }
 
+/* make default input box invisible */
 
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
 
+/* *can use position: absolute because
+*parent element (.switch) is set to relative */
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+}
+
+/* TODO - takes notes on pesudo selectors */
+
+.slider::before {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 3px;
+	bottom: 3px;
+}
