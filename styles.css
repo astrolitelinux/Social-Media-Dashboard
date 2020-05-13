@@ -15,6 +15,10 @@ body {
 	background-color: hsl(225, 100%, 98%);
 	min-width: 1440px;
 	height: 244px;
+	overflow-x: hidden;
+	/* *using .heading as a container div,
+	*position set to relative so I can set child elements to absolute */
+	position: relative;
 }
 
 /* *this is a <span> element, so margin/padding
@@ -23,67 +27,48 @@ body {
 
 /* *switched from h1 to span to use inline-block element properties */
 
-.parent {
-	/* using margin:175px to cancel out the positioning */
-	margin-right: 175px;
-	overflow-x: hidden;
-	position: relative;
-	top: 36px;
-	left: 175px;
-}
+/* *switched "Social Dashboard" Header from h1 to span to use inline-block element properties */
 
 .social-title {
-	display: inline;
 	font-size: 28px;
 	font-weight: 700;
+	margin-top: 40px;
+	margin-left: 190px;
 }
 
-/* *styles needed to keep toggle section
-*inline with .social-title */
-
-#toggle {
-	display: inline;
-	position: relative;
-	left: 646px;
-}
-
-/* *switched from h1 to span to use inline-block element properties */
-
-.parent {
-	position: relative;
-	top: 36px;
-	left: 175px;
-	min-width: 100%;
-}
-
-.social-title {
-	display: inline;
-	font-size: 28px;
+.sub-title {
+	color: hsl(228, 12%, 44%);
 	font-weight: 700;
+	margin-top: 3px;
+	margin-left: 192px;
 }
 
-/* *styles needed to keep toggle section
-*inline with .social-title */
+/* toggle switch container */
 
 #toggle {
-	display: inline;
-	position: relative;
-	left: 646px;
-	top: 49px;
+	display: block;
+	width: 136px;
+	height: 24px;
+	position: absolute;
+	top: 53px;
+	left: 1139px;
 }
 
 #toggle p {
-	color: hsl(230, 22%, 74%);
+	color: hsl(229, 18.8%, 59.4%);
 	display: inline;
 	padding-right: 13px;
+	position: relative;
+	top: 3px;
 	font-weight: 700;
 }
 
 /* *set toggle switch to inline-block
-*so we can set width and height */
-
-/* *set position to relative so we can
+*so we can set width and height
+*set position to relative so we can
 *set SLIDER (child) position to ABSOLUTE */
+
+/* represents full toggle switch */
 
 .switch {
 	position: relative;
@@ -100,26 +85,57 @@ body {
 	height: 0;
 }
 
-/* *can use position: absolute because
+/* *can use position: ABSOLUTE because
 *parent element (.switch) is set to relative */
 
 .slider {
 	position: absolute;
 	cursor: pointer;
+	/* setting all 4 to zero makes element fill it's container
+	(basically setting it "0" px away from each side of its relative position */
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: greenyellow;
-	transition: .4s;
+	/* must set color or nothing will display */
+	background-color: hsl(230, 22%, 74%);
+	transition: .5s;
 }
 
-/* TODO - takes notes on pesudo selectors */
+/* TODO - takes notes on psuedo selectors
+*creates a psuedo element positioned right
+*before element with class .slider */
 
-.slider::before {
+.slider::after {
 	position: absolute;
+	content: "";
 	width: 18px;
 	height: 18px;
-	left: 3px;
+	right: 3px;
+	/* ^^^ sets the button to the right */
+	top: 3px;
 	bottom: 3px;
+	background-color: hsl(227, 47.4%, 96.3%);
+	transition: .5s;
+}
+
+/* *selects any element with class="slider"
+*that are immediately after an input element that is also checked  */
+
+input:checked+.slider {
+	background-image: linear-gradient(225deg, #40DB82, #388FE7);
+}
+
+input:checked+.slider::after {
+	transform: translateX(-23px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round::after {
+	border-radius: 50%;
 }
