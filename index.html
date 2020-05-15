@@ -6,7 +6,7 @@
 	<!-- displays site properly based on user's device -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- sets icon in browser tab -->
-	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 
 	<link rel="stylesheet" type="text/css" href="styles.css">
 
@@ -29,78 +29,119 @@
 </head>
 
 <body>
-	<div class="heading">
+	<div class="heading"> </div>
+	<div class="full-page-wrap">
 		<h1 class="social-title">Social Media Dashboard</h1>
 		<p class="sub-title">Total Followers: 23,004</p>
 
 		<div id="toggle">
 			<p>Dark Mode</p><label class="switch"><input type="checkbox">
-			<!-- *span w/ classes is used to set CSS styles (this one is an empty element, creates slider section in CSS) -->
-			<span class="slider round"></span></label>
+				<!-- *span w/ classes is used to set CSS styles (this one is an empty element, creates slider section in CSS) -->
+				<span class="slider round"></span></label>
 		</div>
 		<!-- * ^^^ section above has inline elements, so I removed linebreaks in code, as they will create whitespace in browser -->
 
+		<div id="grid-1">
+
+			<div class="border-wrap facebook">
+				<div class="item-1">
+					<img src="images/icon-facebook.svg" alt="facebook icon">
+					<h6>@nathanf</h6>
+					<h1>1987</h1>
+					<h5>Followers</h5>
+					<img src="images/icon-up.svg" alt="green arrow" id="little-icon">
+					<p>12 Today</p>
+				</div>
+			</div>
+
+			<div class="border-wrap twitter">
+				<div class="item-1 twitter">
+					<img src="images/icon-twitter.svg" alt="twitter icon">
+					<h6>@nathanf</h6>
+					<h1>1044</h1>
+					<h5>Followers</h5>
+					<img src="images/icon-up.svg" alt="green arrow" id="little-icon">
+					<p>99 Today</p>
+				</div>
+			</div>
+
+			<div class="border-wrap insta">
+				<div class="item-1">
+					<img src="images/icon-instagram.svg" alt="instagram icon">
+					<h6>@realnathanf</h6>
+					<h1>11k</h1>
+					<h5>Followers</h5>
+					<img src="images/icon-up.svg" alt="green arrow" id="little-icon">
+					<p>1099 Today</p>
+				</div>
+			</div>
+
+			<div class="border-wrap youtube">
+				<div class="item-1">
+					<img src="images/icon-youtube.svg" alt="">
+					<h6>Nathan F.</h6>
+					<h1>8239</h1>
+					<h5>Subscribers</h5>
+					<img src="images/icon-down.svg" alt="green arrow" id="little-icon">
+					<p>144 Today</p>
+				</div>
+			</div>
+
+		</div>
+
+		<h1 class="mid-heading">Overview - Today</h1>
+		<div id="grid-2">
+
+			<div class="item-2">
+				Page Views
+				87
+				3%
+			</div>
+			<div class="item-2">
+				Likes
+				52
+				2%
+			</div>
+			<div class="item-2">
+				Likes
+				5462
+				2257%
+			</div>
+			<div class="item-2">
+				Profile Views
+				52k
+				1375%
+			</div>
+
+			<div class="item-2">
+				Retweets
+				117
+				303%
+			</div>
+
+			<div class="item-2">
+				Likes
+				507
+				553%
+			</div>
+
+			<div class="item-2">
+				Likes
+				107
+				19%
+			</div>
+
+			<div class="item-2">
+				Total Views
+				1407
+				12%
+			</div>
+		</div>
+		<!--<div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+			Coded by <a href="#">Your Name Here</a>.
+		</div>-->
 	</div>
-
-	@nathanf
-	1987
-	Followers
-	12 Today
-
-	@nathanf
-	1044
-	Followers
-	99 Today
-
-	@realnathanf
-	11k
-	Followers
-	1099 Today
-
-	Nathan F.
-	8239
-	Subscribers
-	144 Today
-
-	Overview - Today
-
-	Page Views
-	87
-	3%
-
-	Likes
-	52
-	2%
-
-	Likes
-	5462
-	2257%
-
-	Profile Views
-	52k
-	1375%
-
-	Retweets
-	117
-	303%
-
-	Likes
-	507
-	553%
-
-	Likes
-	107
-	19%
-
-	Total Views
-	1407
-	12%
-
-	<div class="attribution">
-		Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-		Coded by <a href="#">Your Name Here</a>.
-	</div>
-
 </body>
 
 </html>

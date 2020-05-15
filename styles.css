@@ -9,38 +9,39 @@ body {
 	color: hsl(230, 17%, 14%);
 }
 
-/* Heading styles with Lightgra.y BG */
-
 .heading {
 	background-color: hsl(225, 100%, 98%);
 	min-width: 1440px;
-	height: 244px;
+	height: 260px;
 	overflow-x: hidden;
 	/* *using .heading as a container div,
 	*position set to relative so I can set child elements to absolute */
 	position: relative;
 }
 
+.full-page-wrap {
+	max-width: 1110px;
+	position: relative;
+	top: -220px;
+	left: 165px;
+}
+
 /* *this is a <span> element, so margin/padding
 *top or bottom will not work. using position: relative,
-*with offset value instead */
-
-/* *switched from h1 to span to use inline-block element properties */
-
-/* *switched "Social Dashboard" Header from h1 to span to use inline-block element properties */
+*with offset value instead
+*switched from h1 to span to use inline-block element properties
+*switched "Social Dashboard" Header from h1 to span to use inline-block element properties */
 
 .social-title {
 	font-size: 28px;
 	font-weight: 700;
-	margin-top: 40px;
-	margin-left: 190px;
 }
 
 .sub-title {
 	color: hsl(228, 12%, 44%);
 	font-weight: 700;
 	margin-top: 3px;
-	margin-left: 192px;
+	margin-left: 2px;
 }
 
 /* toggle switch container */
@@ -50,8 +51,8 @@ body {
 	width: 136px;
 	height: 24px;
 	position: absolute;
-	top: 53px;
-	left: 1139px;
+	top: 20px;
+	right: 0;
 }
 
 #toggle p {
@@ -138,4 +139,128 @@ input:checked+.slider::after {
 
 .slider.round::after {
 	border-radius: 50%;
+}
+
+#grid-1 {
+	display: grid;
+	/* default is row, which creates a new row for new items.
+	set to column to create a new column for each item */
+	grid-auto-flow: column;
+	gap: 30px;
+	position: relative;
+	top: 46px;
+}
+
+.item-1 {
+	box-sizing: border-box;
+	width: 255px;
+	height: 216px;
+	background-color: hsl(227, 47%, 96%);
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding-top: 35px;
+}
+
+.border-wrap.facebook {
+	width: 255px;
+	padding-top: 4px;
+	border-radius: 5px;
+	background: hsl(208, 91.7%, 52.5%);
+}
+
+.border-wrap.twitter {
+	width: 255px;
+	padding-top: 4px;
+	border-radius: 5px;
+	background: hsl(203, 89.1%, 53.1%);
+}
+
+.border-wrap.insta {
+	width: 255px;
+	padding-top: 4px;
+	border-radius: 5px;
+	background: linear-gradient(225deg, rgba(223, 72, 150, 1) 0%, rgba(238, 135, 126, 1) 51%, rgba(253, 195, 102, 1) 100%);
+}
+
+.border-wrap.youtube {
+	width: 255px;
+	padding-top: 4px;
+	border-radius: 5px;
+	background: hsl(348, 97%, 39%);
+}
+
+.item-1 h6 {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	color: hsl(228, 11.6%, 43.9%);
+	padding-top: 3px;
+	padding-bottom: 2px;
+}
+
+.item-1 h1 {
+	font-size: 56px;
+	font-weight: 700;
+	line-height: 48px;
+	letter-spacing: -2px;
+	padding-top: 30px;
+	padding-bottom: 9px;
+}
+
+.item-1 h5 {
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 25px;
+	color: hsl(228, 11.6%, 43.9%);
+}
+
+.item-1 p {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: 700;
+	color: hsl(163, 71.6%, 41.4%);
+}
+
+.border-wrap.youtube p {
+	color: hsl(356, 68.9%, 55.9%);
+}
+
+.border-wrap.twitter h6 {
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.item-1 img {
+	width: 20px;
+	height: 20px;
+	padding-right: 8px;
+	vertical-align: middle;
+}
+
+.border-wrap.twitter img {
+	height: 16.25px;
+}
+
+#little-icon {
+	width: 8px;
+	height: 5px;
+	padding-right: 4px;
+}
+
+.mid-heading {
+	font-size: 24px;
+	font-weight: 700;
+	position: relative;
+	top: 94px;
+	color:hsl(228, 11.6%, 43.9%);
+}
+
+#grid-2 {
+	position: relative;
+	top: 147px;
+	display: grid;
+	grid-auto-flow: column;
 }
