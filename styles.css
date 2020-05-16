@@ -23,7 +23,7 @@ body {
 	max-width: 1110px;
 	position: relative;
 	top: -220px;
-	left: 165px;
+	left: 175px;
 }
 
 /* *this is a <span> element, so margin/padding
@@ -234,8 +234,6 @@ input:checked+.slider::after {
 }
 
 .item-1 img {
-	width: 20px;
-	height: 20px;
 	padding-right: 8px;
 	vertical-align: middle;
 }
@@ -255,7 +253,7 @@ input:checked+.slider::after {
 	font-weight: 700;
 	position: relative;
 	top: 94px;
-	color:hsl(228, 11.6%, 43.9%);
+	color: hsl(228, 11.6%, 43.9%);
 }
 
 #grid-2 {
@@ -263,4 +261,67 @@ input:checked+.slider::after {
 	top: 147px;
 	display: grid;
 	grid-auto-flow: column;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	column-gap: 30px;
+	row-gap: 24px;
+}
+
+.item-2 {
+	width: 255px;
+	height: 125px;
+	background-color: hsl(227, 47.4%, 96.3%);
+	border-radius: 5px;
+}
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	padding: 26px 31px 0px 24px;
+}
+
+.box2 {
+	display: flex;
+	justify-content: space-between;
+	padding: 21px 31px 19px 24px;
+}
+
+.item-2 p {
+	padding-top: 19px;
+	padding-bottom: 5px;
+	font-size: 12px;
+	color: hsl(163, 71.6%, 41.4%);
+	font-weight: 700;
+}
+
+#twittericon {
+	height: 16.25px;
+}
+
+.item-2 h3 {
+	font-size: 14px;
+	font-weight: 700;
+	color: hsl(228, 11.6%, 43.9%);
+}
+
+.item-2 h1 {
+	font-size: 32px;
+	font-weight: 700;
+}
+
+.box2 p::before {
+	content: url(images/icon-up.svg);
+	position: relative;
+	bottom: 3px;
+	padding-right: 3px;
+}
+
+p#down {
+	color: hsl(356, 68.9%, 55.9%);
+}
+
+p#down::before {
+	content: url(images/icon-down.svg);
+
+	padding-right: 3px;
 }
