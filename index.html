@@ -14,21 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
 	<title>PRACTICE | Social Media Dashboard</title>
-	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-	<style>
-		.attribution {
-			font-size: 11px;
-			text-align: center;
-			position: relative;
-			top: 230px;
-			padding-bottom: 7px;
-		}
 
-		.attribution a {
-			color: hsl(228, 45%, 44%);
-		}
-
-	</style>
 </head>
 
 <body>
@@ -146,6 +132,22 @@
 			Coded by <a href="https://github.com/astrolitelinux">andrea</a>.
 		</div>
 	</div>
+
+	<script>
+		const toggleSwitch = document.querySelector('.switch input[type="checkbox"]');
+
+			function switchTheme(e) {
+				if (e.target.checked) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				}
+				else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			}
+
+			toggleSwitch.addEventListener('change', switchTheme, false);
+
+	</script>
 </body>
 
 </html>
