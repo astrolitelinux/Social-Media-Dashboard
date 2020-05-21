@@ -9,6 +9,7 @@
 	--primary-color: hsl(230, 17%, 14%);
 	--secondary-color: hsl(228, 12%, 44%);
 	--card-bg-color: hsl(227, 47%, 96%);
+	--link-color: hsl(228, 45%, 44%);
 }
 
 [data-theme="dark"] {
@@ -17,6 +18,19 @@
 	--primary-color: hsl(0, 0%, 100%);
 	--secondary-color: hsl(228, 34%, 66%);
 	--card-bg-color: hsl(228, 28%, 20%);
+	--link-color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	position: relative;
+	top: 230px;
+	padding-bottom: 7px;
+}
+
+.attribution a {
+	color: var(--link-color);
 }
 
 body {
